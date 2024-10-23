@@ -6,4 +6,8 @@ export default class TodoItem {
         this.actionDate = actionDate;
         this.priority = priority;
     }
+
+    toString() {
+        return `${this.title} - ${this.dueDate} - ${this.priority}`;
+    }
 }

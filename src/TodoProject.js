@@ -1,5 +1,5 @@
 export default class TodoProject {
-    todoProject = [];
+    projectTodos = [];
 
     constructor(title, description) {
         this.title = title;
@@ -7,6 +7,16 @@ export default class TodoProject {
     }
 
     addTodoItem(todoItem) {
-        this.todoProject.push(todoItem);
+        this.projectTodos.push(todoItem);
+    }
+
+    toString() {
+        let projectString = `${this.title}: ${this.description}\n`;
+
+        this.projectTodos.forEach((todo) => {
+            projectString += todo.toString();
+        });
+
+        return projectString;
     }
 }
